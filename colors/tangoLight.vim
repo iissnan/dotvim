@@ -4,7 +4,7 @@
 " ONLY FOR GUI
 "
 " author: IIssNan <iissnan@gmail.com>
-" version: 0.1 intialed.
+" version: 0.2 intialed.
 "
 
 set background=light
@@ -57,29 +57,29 @@ hi Boolean guifg=#3465a4
 hi Float guifg=#ce5c00
 
 " 语句组
-hi Statement guifg=#06989a
-hi Conditional guifg=#4e9a06
-hi Repeat guifg=#4e9a06
-hi Label guifg=#4e9a06
+hi Statement guifg=#06989a gui=none
+hi Conditional guifg=#ef2929
+hi Repeat guifg=#ef2929
+hi Label guifg=#ef2929
 hi Operator guifg=#4e9a06
-hi Keyword guifg=#4e9a06
-hi Exception guifg=#4e9a06
+hi Keyword guifg=#ef2929
+hi Exception guifg=#ef2929
 
 " 变量组
 hi Function guifg=#5c3566
-hi Identifier guifg=#cc0000
+hi Identifier guifg=#6A5ACD
 
 " 预处理命令组
-hi PreProc guifg=#cc0000
-hi Include guifg=#cc0000
-hi Define guifg=#cc0000
-hi Macro guifg=#cc0000
-hi PreCondit guifg=#cc0000
+hi PreProc guifg=#6A5ACD
+hi Include guifg=#6A5ACD
+hi Define guifg=#6A5ACD
+hi Macro guifg=#6A5ACD
+hi PreCondit guifg=#6A5ACD
 
-hi Underlined gui=none
+hi Underlined guifg=#cc0000 gui=none
 hi Type guifg=#204a87 gui=none
-hi Special guifg=#a40000
-hi Error guifg=#4a9e06 guibg=#a40000
+hi Special guifg=#555753
+hi Error guifg=#fce94f guibg=#a40000
  
 " Diff
 hi DiffAdd guifg=fg guibg=#3465a4 gui=none
