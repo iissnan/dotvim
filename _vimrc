@@ -1,9 +1,29 @@
 set nocompatible
-source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
+" ===============================================================================================
+" Æ½Ì¨Ïà¹Ø: Windows & Linux @ 2009-04-25
 
-"ç¼–ç è®¾ç½®,å½»åº•è§£å†³ä¸­æ–‡ä¹±ç é—®é¢˜
+" Æ½Ì¨¼ì²âº¯Êı OsDetect
+function! OsDetect()
+  if has("win32")
+    return "windows"
+  else
+    return "linux"
+  endif
+endfunction
+
+
+" ÔØÈëwindowsÆ½Ì¨µÄÄ¬ÈÏÉèÖÃ
+if OsDetect() == 'windows'
+  source $VIMRUNTIME/vimrc_example.vim
+  source $VIMRUNTIME/mswin.vim
+  behave mswin
+  " ÉèÖÃ°ïÖúÎÄ¼şÎªÖĞÎÄ£¬Ç°ÌáÊÇÒÑ¾­°²×°¹ıÁËÖĞÎÄ°ïÖú
+  set helplang=cn
+endif
+" ===============================================================================================
+
+" ===============================================================================================
+" ±àÂëÉèÖÃ,½â¾öÖĞÎÄÂÒÂë @ 2009-04-25
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 if has("win32")
@@ -12,65 +32,60 @@ else
     set fileencoding=utf-8
 endif
 let &termencoding=&encoding
-" è§£å†³èœå•ä¹±ç 
+" ½â¾ö²Ëµ¥ÂÒÂë
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-" è§£å†³consleè¾“å‡ºä¹±ç 
+" ½â¾öconsleÊä³öÂÒÂë
 language messages zh_CN.utf-8
+" ===============================================================================================
 
+" ===============================================================================================
+" ¸öÈËÏ°¹ßÉèÖÃ @ 2009-04-25
 
-set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
-    else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
-
-" å…³é—­è‡ªåŠ¨å¤‡ä»½
+" ¹Ø±Õ×Ô¶¯±¸·İ
 set nobackup
 
-" å…³é—­äº¤æ¢æ–‡ä»¶
+" ¹Ø±Õ½»»»ÎÄ¼ş
 set noswapfile
 
-" å¼€å¯æ˜¾ç¤ºè¡Œå·
+" ¿ªÆôÏÔÊ¾ĞĞºÅ
 set nu!
 
-" å¼€å¯æ‰€åœ¨è¡Œ/åˆ—é«˜äº®
-set cursorline
+" ¿ªÆôËùÔÚĞĞ/ÁĞ¸ßÁÁ
 "set cursorcolumn
+set cursorline
 
-" è®¾ç½®tabç¼©è¿›
+" ÉèÖÃtabËõ½ø
 set sts=2
 set expandtab tabstop=2 shiftwidth=2
 
-" è®¾ç½®å­—ä½“
-" set guifont=consolas:h8
-set guifont=Monaco:h8
+" ÉèÖÃ×ÖÌå
+set guifont=Monaco:h8,consolas:h8,courier_New:h8
 set guifontwide=YaHei_consolas_Hybrid:h9,monaco:h9
 
-" è®¾ç½®ä¸»é¢˜
+" ÉèÖÃÖ÷Ìâ
 colorscheme tangoLight
 
-" è®¾ç½®çª—å£å¤§å°
+" ÉèÖÃ´°¿Ú´óĞ¡
 set lines=30 columns=120
+" ===============================================================================================
 
-" è®¾ç½®å¸®åŠ©æ–‡ä»¶ä¸ºä¸­æ–‡ï¼Œå‰ææ˜¯å·²ç»å®‰è£…è¿‡äº†ä¸­æ–‡å¸®åŠ©
-set helplang=cn
+" ===============================================================================================
+" Èô¾­³£±à¼­ÅäÖÃÎÄ¼şÈç_vimrc»òÕßÅäÉ«ÎÄ¼şcolors/schemename.vimÊ±
+" ĞèÒªÖØĞÂÔØÈë»òÕß×Ô¶¯ÖØÔØÎÄ¼ş´ËÊ±ÒÔÏÂµÄÃüÁî·Ç³£ÓĞÓÃ  @ 2009-04-25
+
+" ÉèÖÃÆ¥Åä±äÁ¿
+let mapleader = ','
+if OsDetect() == 'windows'
+  " ÖØÔØÅäÖÃÎÄ¼ş
+  map <silent> <leader>rrc :source $vim/_vimrc<cr>
+  " ±à¼­ÅäÖÃÎÄ¼ş
+  map <silent> <leader>erc :e $vim/_vimrc<cr>
+  " µ±Ğ´ÈëÊ±×Ô¶¯ÖØÔØÎÄ¼ş
+  autocmd! bufwritepost $vim/vim72/colors/tangoLight.vim source $vim/vim72/colors/tangoLight.vim
+elseif OsDetect() == 'linux'
+  map <silent> <leader>rrc :source ~/.vimrc<cr>
+  map <silent> <leader>erc :e ~/.vimrc<cr>
+  autocmd! bufwritepost vimrc source ~/.vimrc
+endif
+" ===============================================================================================
