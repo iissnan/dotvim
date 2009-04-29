@@ -27,9 +27,9 @@ endif
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 if has("win32")
-    set fileencoding=chinese
+  set fileencoding=chinese
 else
-    set fileencoding=utf-8
+  set fileencoding=utf-8
 endif
 let &termencoding=&encoding
 " 解决菜单乱码
@@ -49,25 +49,38 @@ set nobackup
 set noswapfile
 
 " 开启显示行号
-set nu!
+set number!
 
 " 开启所在行/列高亮
 "set cursorcolumn
 set cursorline
 
-" 设置tab缩进
-set sts=2
-set expandtab tabstop=2 shiftwidth=2
+" 设置缩进 @ 2009-04-29
+set autoindent
+set smartindent
+" 使用空格替代tab
+set expandtab
+" 一个tab为多少空格
+set tabstop=2
+" 自动缩进宽度
+set shiftwidth=2
 
 " 设置字体
 set guifont=Monaco:h8,consolas:h8,courier_New:h8
 set guifontwide=YaHei_consolas_Hybrid:h9,monaco:h9
 
-" 设置主题
+" 设置主题 黑色wombat 与 白色 tangoLight
+" colorscheme wombat
 colorscheme tangoLight
 
 " 设置窗口大小
 set lines=30 columns=120
+
+" 快捷键设置 - 标签页操作 @ 2009-04-29
+map te :tabnew<cr>
+map tn :tabnext<cr>
+map tp :tabprevious<cr>
+map tc :tabclose<cr>
 " ===============================================================================================
 
 " ===============================================================================================
@@ -80,12 +93,21 @@ if OsDetect() == 'windows'
   " 重载配置文件
   map <silent> <leader>rrc :source $vim/_vimrc<cr>
   " 编辑配置文件
-  map <silent> <leader>erc :e $vim/_vimrc<cr>
+  map <silent> <leader>erc :tabedit $vim/_vimrc<cr>
   " 当写入时自动重载文件
   autocmd! bufwritepost $vim/vim72/colors/tangoLight.vim source $vim/vim72/colors/tangoLight.vim
 elseif OsDetect() == 'linux'
   map <silent> <leader>rrc :source ~/.vimrc<cr>
-  map <silent> <leader>erc :e ~/.vimrc<cr>
+  map <silent> <leader>erc :tabedit ~/.vimrc<cr>
   autocmd! bufwritepost vimrc source ~/.vimrc
 endif
 " ===============================================================================================
+" ctags @2009-04-29
+set tags=tags;
+" 自动切换到文件所在的目录
+set autochdir
+
+" ===============================================================================================
+" 临时配置 @ 2009-04-29
+" 新标签页编辑iissvim/_vimrc文件
+map <silent> <leader>grc :tabedit d:/iissvim/_vimrc<cr> 

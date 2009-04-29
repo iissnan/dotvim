@@ -1,11 +1,10 @@
-" Tango Light Vim Color Scheme
+"Tango Light ColorScheme for vim
 " =============================
-"
 " ONLY FOR GUI
 "
 " author: IIssNan <iissnan@gmail.com>
 " version: 0.1 intialed.
-"
+" date : 2009-04-29
 
 set background=light
  
@@ -14,9 +13,9 @@ if exists("syntax_on")
     syntax reset
 endif
  
-let colors_name = "tangoLight"
+let colors_name = "tangolight"
  
-" Default Colors
+" 普通组 
 hi Normal guifg=#2e3436 guibg=#fefefe
 hi NonText guifg=#555753 guibg=#fefefe gui=none
 hi Cursor guibg=#222222
@@ -35,12 +34,12 @@ hi VertSplit guifg=#eeeeec guibg=#eeeeec
 hi Folded guifg=#d3d7cf guibg=#729fcf
 hi Visual guifg=#eeeeec guibg=#75507b
  
-" Specials
+" 其他
 hi Todo guifg=#ffffff guibg=#4e9a06 gui=bold
 hi Title guifg=#5c3566 gui=bold
  
 " 注释
-hi Comment guifg=#06989a gui=italic
+hi Comment guifg=#06989a gui=none
 
 " 常数组
 hi Constant guifg=#3465a4
@@ -75,9 +74,8 @@ hi Type guifg=#204a87 gui=none
 hi Special guifg=#555753
 hi Error guifg=#fce94f guibg=#a40000
  
-" Diff
+" 比较组
 hi DiffAdd guifg=fg guibg=#3465a4 gui=none
 hi DiffChange guifg=fg guibg=#555753 gui=none
 hi DiffDelete guibg=bg
 hi DiffText guifg=fg guibg=#c4a000 gui=none
-
