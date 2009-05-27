@@ -13,7 +13,7 @@ if exists("syntax_on")
     syntax reset
 endif
  
-let colors_name = "tangolight"
+let colors_name = "tangoLight"
  
 " ÆÕÍ¨×é 
 hi Normal guifg=#2e3436 guibg=#fefefe
