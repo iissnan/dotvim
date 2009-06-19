@@ -56,6 +56,11 @@ language messages zh_CN.utf-8
 " ===============================================================================================
 " 个人习惯设置 @ 2009-04-25
 
+" 关闭菜单
+set guioptions-=m
+" 关闭工具栏
+set guioptions-=T
+
 " 关闭自动备份
 set nobackup
 
@@ -81,9 +86,14 @@ set tabstop=2
 set shiftwidth=2
 
 " 设置主题 黑色wombat 与 白色 tangoLight
-" colorscheme desert
 " colorscheme wombat
-colorscheme tangoLight
+" colorscheme desert
+" colorscheme paintbox
+" colorscheme darkspectrum
+" colorscheme jammy
+" colorscheme molokai
+" colorscheme ir_black
+ colorscheme tangoX
 
 " 让文本文件也有高亮 @ 2009-05-27
 augroup filetypedetect
@@ -100,7 +110,7 @@ set selection=inclusive
 set lines=30 columns=120
 
 " tab 自动区分补全与缩进
-function InsertTabWrapper()
+function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1]!~ '\k'
     return "\<tab>"
@@ -131,9 +141,9 @@ if OsDetect() == 'windows'
   " 当写入时自动重载文件
   autocmd! bufwritepost $vim/vim72/colors/tangoLight.vim source $vim/vim72/colors/tangoLight.vim
 elseif OsDetect() == 'linux'
-  map <silent> <leader>rrc :source ~/.vimrc<cr>
-  map <silent> <leader>erc :tabedit ~/.vimrc<cr>
-  autocmd! bufwritepost vimrc source ~/.vimrc
+  map <silent> <leader>rrc :source ~/_vimrc<cr>
+  map <silent> <leader>erc :tabedit ~/_vimrc<cr>
+  autocmd! bufwritepost vimrc source ~/rvimrc
 endif
 " ===============================================================================================
 " ctags @2009-04-29

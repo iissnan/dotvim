@@ -13,43 +13,43 @@ if exists("syntax_on")
     syntax reset
 endif
  
-let colors_name = "tangoLight"
+let colors_name = "tangoX"
  
-" ÆÕÍ¨×é 
+" æ™®é€šç»„ 
 hi Normal guifg=#2e3436 guibg=#fefefe
 hi NonText guifg=#555753 guibg=#fefefe gui=none
 hi Cursor guibg=#222222
 hi CursorLine guibg=#eeeeec
 hi lCursor guibg=#d3d7cf
-hi LineNr guifg=#555753 guibg=#d3d7cf
+hi LineNr guifg=#555753 guibg=#eeeeee
  
-" ËÑË÷
+" æœç´¢
 hi Search guifg=#eeeeec guibg=#204a87
 hi IncSearch guibg=#eeeeec guifg=#729fcf
  
-" ´°¿Ú
+" çª—å£
 hi StatusLine guifg=#ffffff guibg=#204a87 gui=bold
 hi StatusLineNC guifg=#d3d7df guibg=#4e9a06
 hi VertSplit guifg=#eeeeec guibg=#eeeeec
 hi Folded guifg=#d3d7cf guibg=#729fcf
 hi Visual guifg=#eeeeec guibg=#75507b
  
-" ÆäËû
+" å…¶ä»–
 hi Todo guifg=#ffffff guibg=#4e9a06 gui=bold
-hi Title guifg=#5c3566 gui=bold
+hi Title guifg=#5c3566 gui=none
  
-" ×¢ÊÍ
+" æ³¨é‡Š
 hi Comment guifg=#06989a gui=none
 
-" ³£Êı×é
+" å¸¸æ•°ç»„
 hi Constant guifg=#3465a4
-hi String guifg=#3465a4
+hi String guifg=#3465a4 gui=italic
 hi Character guifg=#3465a4
 hi Number guifg=#ce5c00
 hi Boolean guifg=#3465a4
 hi Float guifg=#ce5c00
 
-" Óï¾ä×é
+" è¯­å¥ç»„
 hi Statement guifg=#ce5c00 gui=none
 hi Conditional guifg=#ef2929
 hi Repeat guifg=#ef2929
@@ -58,11 +58,11 @@ hi Operator guifg=#4e9a06
 hi Keyword guifg=#ef2929
 hi Exception guifg=#ef2929
 
-" ±äÁ¿×é
+" å˜é‡ç»„
 hi Function guifg=#5c3566
 hi Identifier guifg=#6A5ACD
 
-" Ô¤´¦ÀíÃüÁî×é
+" é¢„å¤„ç†å‘½ä»¤ç»„
 hi PreProc guifg=#6A5ACD
 hi Include guifg=#6A5ACD
 hi Define guifg=#6A5ACD
@@ -74,7 +74,7 @@ hi Type guifg=#204a87 gui=none
 hi Special guifg=#555753
 hi Error guifg=#fce94f guibg=#a40000
  
-" ±È½Ï×é
+" æ¯”è¾ƒç»„
 hi DiffAdd guifg=fg guibg=#3465a4 gui=none
 hi DiffChange guifg=fg guibg=#555753 gui=none
 hi DiffDelete guibg=bg
