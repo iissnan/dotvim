@@ -75,7 +75,7 @@ hi Special guifg=#555753
 hi Error guifg=#fce94f guibg=#a40000
  
 " 比较组
-hi DiffAdd guifg=fg guibg=#3465a4 gui=none
-hi DiffChange guifg=fg guibg=#555753 gui=none
+hi DiffAdd guifg=#ffffff guibg=#06989a gui=none
+hi DiffChange guifg=#ffffff guibg=#a40000 gui=none
 hi DiffDelete guibg=bg
-hi DiffText guifg=fg guibg=#c4a000 gui=none
+hi DiffText guifg=#ffffff guibg=#c4a000 gui=none
