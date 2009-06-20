@@ -25,10 +25,10 @@ if OsDetect() == 'windows'
   set helplang=cn
   
   " 设置字体
-  set guifont=Monaco:h8,consolas:h8,courier_New:h8
+  set guifont=Monaco:h8,consolas:h9,courier_New:h8
   " set guifontwide=YaHei_consolas_Hybrid:h9,monaco:h9
-  
 endif
+
 " linux平台的设置 @ 2009-05-27
 if OsDetect() == 'linux'
   " 设置字体
@@ -56,7 +56,7 @@ language messages zh_CN.utf-8
 " ===============================================================================================
 " 个人习惯设置 @ 2009-04-25
 
-" 关闭菜单
+" 关闭菜单 @ 2009-06-17
  set guioptions-=m
 " 关闭工具栏
 set guioptions-=T
@@ -68,7 +68,7 @@ set nobackup
 set noswapfile
 
 " 开启显示行号
-set number!
+set number
 
 " 开启所在行/列高亮
 "set cursorcolumn
@@ -85,7 +85,7 @@ set tabstop=2
 " 自动缩进宽度
 set shiftwidth=2
 
-" 设置主题 黑色wombat 与 白色 tangoLight
+" 设置主题 @2009-06-19
 " colorscheme wombat
 " colorscheme desert
 " colorscheme paintbox
@@ -139,20 +139,15 @@ if OsDetect() == 'windows'
   " 编辑配置文件
   map <silent> <leader>erc :tabedit $vim/_vimrc<cr>
   " 当写入时自动重载文件
-  autocmd! bufwritepost $vim/vim72/colors/tangoLight.vim source $vim/vim72/colors/tangoLight.vim
+  autocmd! bufwritepost $vim/vim72/colors/tangoX.vim source $vim/vim72/colors/tangoX.vim
 elseif OsDetect() == 'linux'
+  " 注意：使用_vimrc
   map <silent> <leader>rrc :source ~/_vimrc<cr>
   map <silent> <leader>erc :tabedit ~/_vimrc<cr>
-  autocmd! bufwritepost vimrc source ~/rvimrc
+  autocmd! bufwritepost _vimrc source ~/_vimrc
 endif
 " ===============================================================================================
 " ctags @2009-04-29
 set tags=tags;
 " 自动切换到文件所在的目录
 set autochdir
-
-" ===============================================================================================
-" 临时配置 @ 2009-05-27
-" 新标签页编辑vimrc文件
-map <silent> <leader>wgrc :tabedit d:/iissvim/_vimrc<cr> 
-map <silent> <leader>lgrc :tabedit ~/.vimrc<cr>
