@@ -86,14 +86,14 @@ set tabstop=2
 set shiftwidth=2
 
 " 设置主题 @2009-06-19
-" colorscheme wombat
+ colorscheme wombat
 " colorscheme desert
 " colorscheme paintbox
 " colorscheme darkspectrum
 " colorscheme jammy
 " colorscheme molokai
 " colorscheme ir_black
- colorscheme tangoX
+" colorscheme tangoX
 
 " 让文本文件也有高亮 @ 2009-05-27
 augroup filetypedetect
