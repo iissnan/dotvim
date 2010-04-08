@@ -1,4 +1,4 @@
-正峰的VIM配置相关文件
+VIM配置相关文件
 ===========================
 
 VIM程序相关文件，包括配置、色彩、插件等。记录开始于2009-04-23。
@@ -22,3 +22,15 @@ VIM程序相关文件，包括配置、色彩、插件等。记录开始于2009-
 2.设置.vimrc引用.vim下的.vimrc文件
     vim .vimrc
     source ~/.vim/.vimrc
+ 
+[2010-04-08] 引进Rails.vim插件
+---------------------------------------------
+
+插件地址： [rails.vim](http://www.vim.org/scripts/script.php?script_id=1567)
+插件版本： 4.2
+
+[2010-04-08] 引进Project.vim插件
+---------------------------------------------
+
+插件地址： [project.vim](http://www.vim.org/scripts/script.php?script_id=69)
+插件版本： 1.4.1
