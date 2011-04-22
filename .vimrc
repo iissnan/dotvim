@@ -1,13 +1,13 @@
-" ·Ç¼æÈİÄ£Ê½ÔËĞĞ
+" éå…¼å®¹æ¨¡å¼è¿è¡Œ
 set nocompatible
 
-" Óï·¨¸ßÁÁ
+" è¯­æ³•é«˜äº®
 syntax on
 
 " ===============================================================================================
-" Æ½Ì¨Ïà¹Ø: Windows & Linux @ 2009-04-25
+" å¹³å°ç›¸å…³: Windows & Linux @ 2009-04-25
 
-" Æ½Ì¨¼ì²âº¯Êı OsDetect
+" å¹³å°æ£€æµ‹å‡½æ•° OsDetect
 function! OsDetect()
   if has("win32")
     return "windows"
@@ -17,30 +17,31 @@ function! OsDetect()
 endfunction
 
 
-" ÔØÈëwindowsÆ½Ì¨µÄÄ¬ÈÏÉèÖÃ
+" è½½å…¥windowså¹³å°çš„é»˜è®¤è®¾ç½®
 if OsDetect() == 'windows'
   source $VIMRUNTIME/vimrc_example.vim
   source $VIMRUNTIME/mswin.vim
   behave mswin
-  " ÉèÖÃ°ïÖúÎÄ¼şÎªÖĞÎÄ£¬Ç°ÌáÊÇÒÑ¾­°²×°¹ıÁËÖĞÎÄ°ïÖú
+  " è®¾ç½®å¸®åŠ©æ–‡ä»¶ä¸ºä¸­æ–‡ï¼Œå‰ææ˜¯å·²ç»å®‰è£…è¿‡äº†ä¸­æ–‡å¸®åŠ©
   set helplang=cn
   
-  " ÉèÖÃ×ÖÌå
+  " è®¾ç½®å­—ä½“
   set guifont=consolas:h9,courier_New:h8
 
-  "YaHei_consolas_Hybrid×ÖÌåµÄÊ¹ÓÃ±ØĞëÏÈÊ¹vimÊ¶±ğÏµÍ³È«²¿×ÖÌå£¨Ê¹ÓÃÍøÉÏÖØĞÂ±àÒë¹ıµÄgvimÌæ»»µôÔ­À´µÄgvim£© 
+  "YaHei_consolas_Hybridå­—ä½“çš„ä½¿ç”¨å¿…é¡»å…ˆä½¿vimè¯†åˆ«ç³»ç»Ÿå…¨éƒ¨å­—ä½“ï¼ˆä½¿ç”¨ç½‘ä¸Šé‡æ–°ç¼–è¯‘è¿‡çš„gvimæ›¿æ¢æ‰åŸæ¥çš„gvimï¼‰ 
   set guifontwide=YaHei_consolas_Hybrid:h9
 endif
 
-" linuxÆ½Ì¨µÄÉèÖÃ @ 2009-05-27
+" linuxå¹³å°çš„è®¾ç½® @ 2009-05-27
 if OsDetect() == 'linux'
-  " ÉèÖÃ×ÖÌå
+  " è®¾ç½®å­—ä½“
   " set guifont=Bitstream_Vera_Sans_Mono_Roman:h8
+  set guifont=Anonymous_Pro:h12
 endif
 " ===============================================================================================
 
 " ===============================================================================================
-" ±àÂëÉèÖÃ,½â¾öÖĞÎÄÂÒÂë @ 2009-04-25
+" ç¼–ç è®¾ç½®,è§£å†³ä¸­æ–‡ä¹±ç  @ 2009-04-25
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 if has("win32")
@@ -49,69 +50,69 @@ else
   set fileencoding=utf-8
 endif
 let &termencoding=&encoding
-" ½â¾ö²Ëµ¥ÂÒÂë
+" è§£å†³èœå•ä¹±ç 
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-" ½â¾öconsleÊä³öÂÒÂë
+" è§£å†³consleè¾“å‡ºä¹±ç 
 language messages zh_CN.utf-8
 " ===============================================================================================
 
 " ===============================================================================================
-" ¸öÈËÏ°¹ßÉèÖÃ @ 2009-04-25
+" ä¸ªäººä¹ æƒ¯è®¾ç½® @ 2009-04-25
 
-" ¹Ø±Õ²Ëµ¥ @ 2009-06-17
+" å…³é—­èœå• @ 2009-06-17
 " set guioptions-=m
-" ¹Ø±Õ¹¤¾ßÀ¸
+" å…³é—­å·¥å…·æ 
 set guioptions-=T
 
-" ¹Ø±Õ×Ô¶¯±¸·İ
+" å…³é—­è‡ªåŠ¨å¤‡ä»½
 set nobackup
 
-" ¹Ø±Õ½»»»ÎÄ¼ş
+" å…³é—­äº¤æ¢æ–‡ä»¶
 set noswapfile
 
-" ¿ªÆôÏÔÊ¾ĞĞºÅ
-set number
+" å¼€å¯æ˜¾ç¤ºè¡Œå·
+" set number
 
-" ¿ªÆôËùÔÚĞĞ/ÁĞ¸ßÁÁ
+" å¼€å¯æ‰€åœ¨è¡Œ/åˆ—é«˜äº®
 "set cursorcolumn
-set cursorline
+"set cursorline
 
-" ÉèÖÃËõ½ø @ 2009-04-29
+" è®¾ç½®ç¼©è¿› @ 2009-04-29
 " set cindent
 set autoindent
 set smartindent
-" Ê¹ÓÃ¿Õ¸ñÌæ´útab
+" ä½¿ç”¨ç©ºæ ¼æ›¿ä»£tab
 set expandtab
-" Ò»¸ötabÎª¶àÉÙ¿Õ¸ñ
-set tabstop=2
-" ×Ô¶¯Ëõ½ø¿í¶È
-set shiftwidth=2
+" ä¸€ä¸ªtabä¸ºå¤šå°‘ç©ºæ ¼
+set tabstop=4
+" è‡ªåŠ¨ç¼©è¿›å®½åº¦
+set shiftwidth=4
 
-" Ö÷Ìâ 
- colorscheme wombat
+" ä¸»é¢˜ 
+" colorscheme wombat
 " colorscheme desert
 " colorscheme paintbox
 " colorscheme jammy
 " colorscheme molokai
 " colorscheme ir_black
-" colorscheme tangoX
+ colorscheme tangoX
 
-" ÈÃÎÄ±¾ÎÄ¼şÒ²ÓĞ¸ßÁÁ @ 2009-05-27
+" è®©æ–‡æœ¬æ–‡ä»¶ä¹Ÿæœ‰é«˜äº® @ 2009-05-27
 augroup filetypedetect
   au BufNewFile,BufRead *.* setf ztxt
 augroup END
 
-" ËÑË÷Î´ÊäÈëÍê³É¼´¿ªÊ¼Æ¥ÅäÏÔÊ¾ @ 2009-05-27
+" æœç´¢æœªè¾“å…¥å®Œæˆå³å¼€å§‹åŒ¹é…æ˜¾ç¤º @ 2009-05-27
 set is
 
-" Ñ¡ÔñÎÄ±¾Ê±¹â±êËùÔÚÎÄ×ÖÒ²±»Ñ¡ÖĞ @ 2009-05-27
+" é€‰æ‹©æ–‡æœ¬æ—¶å…‰æ ‡æ‰€åœ¨æ–‡å­—ä¹Ÿè¢«é€‰ä¸­ @ 2009-05-27
 set selection=inclusive
 
-" ÉèÖÃ´°¿Ú´óĞ¡
-set lines=30 columns=120
+" è®¾ç½®çª—å£å¤§å°
+set lines=50 columns=150
 
-" tab ×Ô¶¯Çø·Ö²¹È«ÓëËõ½ø
+" tab è‡ªåŠ¨åŒºåˆ†è¡¥å…¨ä¸ç¼©è¿›
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1]!~ '\k'
@@ -122,7 +123,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-" ¿ì½İ¼üÉèÖÃ - ±êÇ©Ò³²Ù×÷ @ 2009-04-29
+" å¿«æ·é”®è®¾ç½® - æ ‡ç­¾é¡µæ“ä½œ @ 2009-04-29
 map te :tabnew<cr>
 map tn :tabnext<cr>
 map tp :tabprevious<cr>
@@ -130,17 +131,17 @@ map tc :tabclose<cr>
 " ===============================================================================================
 
 " ===============================================================================================
-" Èô¾­³£±à¼­ÅäÖÃÎÄ¼şÈç_vimrc»òÕßÅäÉ«ÎÄ¼şcolors/schemename.vimÊ±
-" ĞèÒªÖØĞÂÔØÈë»òÕß×Ô¶¯ÖØÔØÎÄ¼ş´ËÊ±ÒÔÏÂµÄÃüÁî·Ç³£ÓĞÓÃ  @ 2009-04-25
+" è‹¥ç»å¸¸ç¼–è¾‘é…ç½®æ–‡ä»¶å¦‚_vimrcæˆ–è€…é…è‰²æ–‡ä»¶colors/schemename.vimæ—¶
+" éœ€è¦é‡æ–°è½½å…¥æˆ–è€…è‡ªåŠ¨é‡è½½æ–‡ä»¶æ­¤æ—¶ä»¥ä¸‹çš„å‘½ä»¤éå¸¸æœ‰ç”¨  @ 2009-04-25
 
-" ÉèÖÃÆ¥Åä±äÁ¿
+" è®¾ç½®åŒ¹é…å˜é‡
 let mapleader = ','
 if OsDetect() == 'windows'
-  " ÖØÔØÅäÖÃÎÄ¼ş
+  " é‡è½½é…ç½®æ–‡ä»¶
   map <silent> <leader>rrc :source $HOME/.vimrc<cr>
-  " ±à¼­ÅäÖÃÎÄ¼ş
+  " ç¼–è¾‘é…ç½®æ–‡ä»¶
   map <silent> <leader>erc :tabedit $HOME/.vimrc<cr>
-  " µ±Ğ´ÈëÊ±×Ô¶¯ÖØÔØÎÄ¼ş
+  " å½“å†™å…¥æ—¶è‡ªåŠ¨é‡è½½æ–‡ä»¶
   autocmd! bufwritepost $HOME/vimfiles/colors/tangoX.vim source $HOME/vimfiles/colors/tangoX.vim
 elseif OsDetect() == 'linux'
   map <silent> <leader>rrc :source ~/.vimrc<cr>
@@ -148,8 +149,9 @@ elseif OsDetect() == 'linux'
   autocmd! bufwritepost .vimrc source ~/.vimrc
 endif
 " ===============================================================================================
-" ctags @2009-04-29
-set tags=tags
 
-" ×Ô¶¯ÇĞ»»µ½ÎÄ¼şËùÔÚµÄÄ¿Â¼
-set autochdir
+" ctags @2009-04-29
+" set tags=tags
+
+" è‡ªåŠ¨åˆ‡æ¢åˆ°æ–‡ä»¶æ‰€åœ¨çš„ç›®å½•
+" set autochdir

@@ -43,7 +43,7 @@ hi Comment guifg=#06989a gui=none
 
 " 常数组
 hi Constant guifg=#3465a4
-hi String guifg=#3465a4 gui=italic
+hi String guifg=#3465a4 gui=none
 hi Character guifg=#3465a4
 hi Number guifg=#ce5c00
 hi Boolean guifg=#3465a4
