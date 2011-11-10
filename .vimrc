@@ -16,8 +16,20 @@ call vundle#rc()
 " required
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-" Bundle 'bundle name'
+" Example Bundles from kinds of repos:
+"
+"==>Original repos on github
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+"==> vim-scripts repos
+" Bundle 'FuzzyFinder'
+" Bundle 'rails.vim'
+" Bundle 'L9'
+"===> non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+
+" My Bundles Here
+Bundle 'Zencoding.vim'
 
 filetype plugin indent on " required of vundle
 
