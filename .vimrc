@@ -31,6 +31,7 @@ Bundle 'gmarik/vundle'
 " My Bundles Here
 Bundle 'manalang/jshint.vim'
 Bundle 'Zencoding.vim'
+Bundle 'IIssNan/tangoX'
 
 filetype plugin indent on " required of vundle
 
