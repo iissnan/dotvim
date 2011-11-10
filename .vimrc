@@ -29,6 +29,7 @@ Bundle 'gmarik/vundle'
 " Bundle 'git://git.wincent.com/command-t.git'
 
 " My Bundles Here
+Bundle 'manalang/jshint.vim'
 Bundle 'Zencoding.vim'
 
 filetype plugin indent on " required of vundle
