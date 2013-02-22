@@ -155,7 +155,7 @@ set is
 set selection=inclusive
 
 " 设置窗口大小
-set lines=50 columns=150
+set lines=25 columns=80
 
 " tab 自动区分补全与缩进
 function! InsertTabWrapper()
