@@ -31,9 +31,12 @@ Bundle 'gmarik/vundle'
 " =================================================
 " My Bundles Here
 
+Bundle 'kchmck/vim-coffee-script'
+
 " + Themes
  Bundle 'vim-scripts/Wombat'
  Bundle 'vim-scripts/Solarized'
+ Bundle 'tomasr/molokai'
  Bundle 'iissnan/tangoX'
 
 " End My Bundles
@@ -139,7 +142,7 @@ set shiftwidth=4
 " colorscheme desert
 " colorscheme paintbox
 " colorscheme jammy
-" colorscheme molokai
+ colorscheme molokai
 " colorscheme ir_black
 " colorscheme tangoX
 
