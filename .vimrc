@@ -28,10 +28,16 @@ Bundle 'gmarik/vundle'
 "===> non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 
+" =================================================
 " My Bundles Here
-Bundle 'manalang/jshint.vim'
-Bundle 'Zencoding.vim'
-Bundle 'IIssNan/tangoX'
+
+" + Themes
+ Bundle 'vim-scripts/Wombat'
+ Bundle 'vim-scripts/Solarized'
+ Bundle 'iissnan/tangoX'
+
+" End My Bundles
+" =================================================
 
 filetype plugin indent on " required of vundle
 
@@ -135,7 +141,7 @@ set shiftwidth=4
 " colorscheme jammy
 " colorscheme molokai
 " colorscheme ir_black
- colorscheme tangoX
+" colorscheme tangoX
 
 " 让文本文件也有高亮 @ 2009-05-27
 augroup filetypedetect
