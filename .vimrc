@@ -31,7 +31,16 @@ Bundle 'gmarik/vundle'
 " =================================================
 " My Bundles Here
 
+" ==> vim-scripts repose
+Bundle 'ZenCoding.vim'
+Bundle 'vim-javascript'
+Bundle 'FavMenu.vim'
+
+" ==> github repos
+Bundle 'scrooloose/nerdtree'
+Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
 
 " + Themes
  Bundle 'vim-scripts/Wombat'
@@ -120,11 +129,11 @@ set nobackup
 set noswapfile
 
 " 开启显示行号
-" set number
+ set number
 
 " 开启所在行/列高亮
 "set cursorcolumn
-"set cursorline
+set cursorline
 
 " 设置缩进 @ 2009-04-29
 " set cindent
