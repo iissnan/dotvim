@@ -41,10 +41,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'Lokaltog/vim-easymotion'
 
 " + Themes
- Bundle 'vim-scripts/Wombat'
- Bundle 'vim-scripts/Solarized'
+ Bundle 'Wombat'
+ Bundle 'Solarized'
  Bundle 'tomasr/molokai'
  Bundle 'iissnan/tangoX'
 
@@ -139,6 +140,7 @@ set cursorline
 " set cindent
 set autoindent
 set smartindent
+
 " 使用空格替代tab
 set expandtab
 " 一个tab为多少空格
