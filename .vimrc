@@ -44,7 +44,6 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'Lokaltog/vim-easymotion'
 
 " + Themes
- Bundle 'Wombat'
  Bundle 'Solarized'
  Bundle 'tomasr/molokai'
  Bundle 'iissnan/tangoX'
@@ -112,7 +111,7 @@ let &termencoding=&encoding
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 " 解决consle输出乱码
-language messages zh_CN.utf-8
+" language messages zh_CN.utf-8
 " ===============================================================================================
 
 " ===============================================================================================
@@ -149,13 +148,14 @@ set tabstop=4
 set shiftwidth=4
 
 " 主题 
-" colorscheme wombat
+ colorscheme wombat
+" colorscheme molokai
+" colorscheme solarized
+" colorscheme tangoX
 " colorscheme desert
 " colorscheme paintbox
 " colorscheme jammy
- colorscheme molokai
 " colorscheme ir_black
-" colorscheme tangoX
 
 " 让文本文件也有高亮 @ 2009-05-27
 augroup filetypedetect
@@ -169,7 +169,7 @@ set is
 set selection=inclusive
 
 " 设置窗口大小
-set lines=25 columns=80
+" set lines=25 columns=80
 
 " tab 自动区分补全与缩进
 function! InsertTabWrapper()
