@@ -214,3 +214,5 @@ endif
 
 " 自动切换到文件所在的目录
 " set autochdir
+
+highlight link htmlLink NONE
