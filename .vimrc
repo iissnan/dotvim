@@ -1,63 +1,54 @@
 " 非兼容模式运行
 set nocompatible
+filetype off " required of vundle
 
-" 语法高亮
 syntax on
 
 " ================================================
 " Vundle : https://github.com/gmarik/vundle
 " ================================================
 
-filetype off " required of vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle
-" required
-Bundle 'gmarik/vundle'
-
-" Example Bundles from kinds of repos:
-"
-"==>Original repos on github
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-"==> vim-scripts repos
-" Bundle 'FuzzyFinder'
-" Bundle 'rails.vim'
-" Bundle 'L9'
-"===> non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
 " =================================================
 " My Bundles Here
+Plugin 'ZenCoding.vim'
+Plugin 'vim-javascript'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'Lokaltog/vim-easymotion'
 
-" ==> vim-scripts repose
-Bundle 'ZenCoding.vim'
-Bundle 'vim-javascript'
-Bundle 'FavMenu.vim'
+" Themes
+Plugin 'Solarized'
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'iissnan/tangoX'
 
-" ==> github repos
-Bundle 'scrooloose/nerdtree'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'Lokaltog/vim-easymotion'
-
-" + Themes
- Bundle 'Solarized'
- Bundle 'tomasr/molokai'
- Bundle 'iissnan/tangoX'
+"Plugin 'fatih/vim-go'
 
 " End My Bundles
 " =================================================
 
-filetype plugin indent on " required of vundle
+" All of your Plugins must be added before the following line
+call vundle#end()         " required
+filetype plugin indent on " required
 
 " ------------- Vundle Brief help -----------------
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve)  removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve)  removal of unused bundles
 " see :h vundle for more details or wiki for FAQ
 " Note: comments after Bundle command are not allowed..
 
